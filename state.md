@@ -18,27 +18,31 @@ Discuss this question in pairs if you have a 4-person group
 import React, { Component } from "react";
 
 class LeadMentor extends Component {
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    this.state = {
-      questionsAnswered: 0
-    };
+        this.state = {
+            questionsAnswered: 0
+        };
 
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick() {
-    this.setState({ questionsAnswered: this.state.questionsAnswered + 1 });
-  }
-  render() {
-    <div className="lead-mentor-container">
-      <h1>Michael Scott</h1>
-      <h3>{this.state.questionsAnswered}</h3>
-      <h3>questions answered today</h3>
-      <button onClick={this.handleClick}>Increase Answers</button>
-    </div>;
-  }
+        this.handleClick = this.handleClick.bind(this);
+    }
+    handleClick() {
+        this.setState({ questionsAnswered: this.state.questionsAnswered + 1 });
+    }
+    render() {
+        return (
+            <div className="lead-mentor-container">
+                <h1>Michael Scott</h1>
+                <h3>{this.state.questionsAnswered}</h3>
+                <h3>questions answered today</h3>
+                <button onClick={this.handleClick}>Increase Answers</button>
+            </div>
+        )
+    }
 }
+
+export default LeadMentor;
 ```
 
 ### Apply
